@@ -8,19 +8,53 @@ body{
 .menu ul{
   display: flex;
   justify-content: space-around;
-  background-color: palevioletred;
+  animation: dismiss 1s;
+  animation-fill-mode: forwards;
 }
 
+.menu ul:hover{
+  animation-name: myanimation; 
+  animation-duration: 1.5s; 
+}
+
+@keyframes myanimation{ 
+  from { 
+    display: flex;
+    justify-content: space-around; 
+  } 
+  to { 
+    background-color: palevioletred;
+    border-radius: 3px;
+    padding: 20px;
+    
+  } 
+} 
+
+@keyframes dismiss{ 
+  from { 
+    background-color: palevioletred;
+    border-radius: 3px;
+    padding: 20px;
+    transition: 1s;
+  } 
+  to { 
+    display: flex;
+    justify-content: space-around; 
+  } 
+} 
+
+
+
 .menu a{
-  color: whitesmoke;
+  color: black;
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
   font-size: 40px;
-  text-decoration: none;
   transition: 1s;
+  text-decoration: none;
 }
 
 .menu a:hover{
-  color: black;
-  border-color: black;
+  color: whitesmoke;
 }
 
 .site-title, .site-subtitle{
@@ -39,5 +73,3 @@ body{
   margin-top: 5px;
   font-size: 20px;
 }
-
-
