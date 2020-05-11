@@ -1,0 +1,43 @@
+body{
+  background-image: linear-gradient(to right, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
+  background-size: auto 100vh;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+  background-color: palevioletred;
+}
+
+.menu a{
+  color: whitesmoke;
+  font-size: 40px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.menu a:hover{
+  color: black;
+  border-color: black;
+}
+
+.site-title, .site-subtitle{
+  text-align: center;
+  color: whitesmoke;
+}
+
+.site-title{
+  font-size: 60px;
+  color: whitesmoke;
+  margin-top: 30px;
+}
+
+.site-subtitle{
+  font-style: italic;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+
