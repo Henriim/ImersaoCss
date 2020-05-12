@@ -1,23 +1,39 @@
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0;
+      transform: rotateX(-10deg); 
+  } 
+  100% { 
+      opacity: 1;
+      transform: rotateX(0);
+  } 
+} 
+
 body{
   background-image: linear-gradient(to right, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
   background-size: auto 100vh;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
+
+  animation: fadeInAnimation ease 4s; 
+  animation-iteration-count: 1; 
 }
 
-.menu ul{
+header{
   display: flex;
-  justify-content: space-around;
-  animation: dismiss 1s;
-  animation-fill-mode: forwards;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu ul:hover{
-  animation-name: myanimation; 
-  animation-duration: 1.5s; 
+.menu{
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
-@keyframes myanimation{ 
+@keyframes myAnimation{ 
   from { 
     display: flex;
     justify-content: space-around; 
@@ -26,6 +42,10 @@ body{
     background-color: palevioletred;
     border-radius: 3px;
     padding: 20px;
+
+    -webkit-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
     
   } 
 } 
@@ -35,15 +55,29 @@ body{
     background-color: palevioletred;
     border-radius: 3px;
     padding: 20px;
+
+    -webkit-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 5px 0px rgba(0,0,0,0.75);
     transition: 1s;
   } 
   to { 
     display: flex;
     justify-content: space-around; 
   } 
-} 
+}
 
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+  animation: dismiss 0.5s;
+  animation-fill-mode: forwards;
+}
 
+.menu ul:hover{
+  animation-name: myAnimation; 
+  animation-duration: 1.5s; 
+}
 
 .menu a{
   color: black;
@@ -51,25 +85,62 @@ body{
   font-size: 40px;
   transition: 1s;
   text-decoration: none;
+  padding: 10px 20px;
+  display: block;
 }
 
 .menu a:hover{
   color: whitesmoke;
 }
 
-.site-title, .site-subtitle{
-  text-align: center;
+@keyframes LoadboxShadow{
+  100%{
+    -webkit-box-shadow: 40px 14px 15px 0px rgba(0,0,0,0.7);
+    -moz-box-shadow: 40px 14px 15px 0px rgba(0,0,0,0.7);
+    box-shadow: 40px 14px 15px 0px rgba(0,0,0,0.7);
+  } 
+}
+
+.apresentation{
   color: whitesmoke;
+  text-align: center;
+  padding: 25px;
+  
+  background-color: rgb(29, 28, 28);
+  border-radius: 5px;
+  
+  animation: LoadboxShadow 1.75s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
 }
 
 .site-title{
-  font-size: 60px;
-  color: whitesmoke;
-  margin-top: 30px;
+  font-size: 6em;
+  border-bottom: 5px solid palevioletred;
+  padding-bottom: 20px;
 }
 
 .site-subtitle{
   font-style: italic;
-  margin-top: 5px;
-  font-size: 20px;
+  padding-top: 10px;
+  font-size: 2em;
+}
+
+.img-portfolio{
+  width: 220px;
+  height: 180px;
+  border-radius: 3px;
+}
+
+
+/*Responsividade*/
+@media (max-width: 400px){
+  body{
+    font-size: 8px; 
+  }
+
+  .menu a{
+    font-size: 15px;
+  }
+  
 }
