@@ -11,6 +11,7 @@
 body{
   background-image: linear-gradient(to right, #43cea2, #00b5b3, #0099bb, #007ab4, #185a9d);
   background-size: auto 100vh;
+  background-attachment: fixed;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
 
@@ -124,21 +125,69 @@ header{
   font-size: 2em;
 }
 
-.img-portfolio{
-  width: 220px;
-  height: 180px;
-  border-radius: 3px;
+.section-title{
+  font-size: 3em;
+  text-align: center;
+  color: whitesmoke;
+  padding-bottom: 50px;
 }
 
 
+.ensino{
+  height: 100vh;
+}
+
+.ensino .grid{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ensino figure{
+  text-align: center;
+  width: 15%;
+}
+
+.ensino  figcaption{
+  padding-top: 20px;
+}
+
+.img-ensino{
+  width: 10em;
+  border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+.projetos .grid{
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 400px 400px;
+  justify-content: center;
+}
+
+.projetos figure{
+  text-align: center;
+}
+
+.img-projeto{
+  width: 16em;
+  height: 16em;
+}
+
+
+
+
 /*Responsividade*/
-@media (max-width: 400px){
+@media (max-width: 500px){
   body{
     font-size: 8px; 
   }
 
-  .menu a{
-    font-size: 15px;
-  }
+  
   
 }
