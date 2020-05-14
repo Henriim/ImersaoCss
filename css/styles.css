@@ -30,6 +30,7 @@ header{
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 @keyframes myAnimation{ 
@@ -69,13 +70,13 @@ header{
 .menu ul{
   display: flex;
   justify-content: space-around;
-  animation: dismiss 0.5s;
+  animation: dismiss 1s;
   animation-fill-mode: forwards;
 }
 
 .menu ul:hover{
   animation-name: myAnimation; 
-  animation-duration: 1.5s; 
+  animation-duration: 0.5s; 
 }
 
 .menu a{
@@ -87,8 +88,9 @@ header{
   padding: 10px 20px;
   display: block;
 }
-
-.menu a:hover{
+  
+.menu a:hover,
+.menu a:active{
   color: whitesmoke;
 }
 
@@ -126,15 +128,16 @@ header{
 }
 
 .section-title{
-  font-size: 3em;
+  font-size: 8em;
   text-align: center;
   color: whitesmoke;
   padding-bottom: 50px;
+  text-shadow: 3px 4px 0px palevioletred;
 }
 
-
 .ensino{
-  height: 100vh;
+  margin-top: 15em;
+  min-height: 100vh;
 }
 
 .ensino .grid{
@@ -149,17 +152,20 @@ header{
 
 .ensino  figcaption{
   padding-top: 20px;
+  font-size: 1.8em;
+  line-height: 1.2;
 }
 
 .img-ensino{
   width: 10em;
   border-radius: 15px;
+  transition: 0.5s;
+  border: 5px solid;
 }
 
-
-
-
-
+.img-ensino:hover{
+  transform: scale(1.2) ;
+}
 
 
 
@@ -179,8 +185,46 @@ header{
   height: 16em;
 }
 
+.contato{
+  margin-top: 15em;
+  min-height: 70vh;
+}
 
+.contato .icons{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
 
+.contato a{
+  color: whitesmoke;
+  font-size: 10em;
+  transition: text-shadow 0.5s;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-shadow: 3px 4px 0px palevioletred;
+}
+
+footer{
+  background-color: palevioletred;
+  -webkit-box-shadow: 0px -8px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -8px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -8px 5px 0px rgba(0,0,0,0.75);
+  width: auto;
+  height: 5em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+*[id]:before { 
+  display: block; 
+  content: " "; 
+  height: 120px; 
+  visibility: hidden; 
+}
 
 /*Responsividade*/
 @media (max-width: 500px){
@@ -191,3 +235,6 @@ header{
   
   
 }
+
+
+
