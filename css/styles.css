@@ -6,7 +6,6 @@
   }
 }
 
-
 @keyframes fadeInAnimation { 
   0% { 
       opacity: 0;
@@ -26,13 +25,6 @@ body{
 
   animation: fadeInAnimation ease 4s; 
   animation-iteration-count: 1; 
-}
-
-header{
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
 }
 
 .menu{
@@ -111,17 +103,42 @@ header{
   } 
 }
 
+.home{
+  min-height: 80vh;
+}
+
 .apresentation{
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
   color: whitesmoke;
   text-align: center;
   padding: 25px;
-  
   background-color: rgb(29, 28, 28);
   border-radius: 5px;
-  
   animation: LoadboxShadow 1.75s;
   animation-delay: 1.75s;
   animation-fill-mode: forwards;
+}
+
+.apresentation-icons{
+  display: flex;
+  justify-content: space-around;
+}
+
+.apresentation-icons a{
+  font-size: 10em;
+  color: whitesmoke;
+  transition: text-shadow 0.5s;
+}
+
+.apresentation-icons a:active,
+.apresentation-icons a:hover{
+  text-shadow: 3px 4px 0px palevioletred;
 }
 
 .site-title{
@@ -215,10 +232,10 @@ header{
 
 .contato{
   margin-top: 15em;
-  min-height: 70vh;
+  min-height: 27vh;
 }
 
-.contato .icons{
+.icons{
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -255,7 +272,7 @@ footer{
 }
 
 
-.home{
+.home-icon{
   color: whitesmoke;
   position: fixed;
   bottom: 3em;
